@@ -4,7 +4,7 @@ session_start();
 require_once 'config/db.php';
  
 $searchTerm = $_GET['term']; 
-$query = $conn->query("SELECT * FROM link_db WHERE l_title LIKE '%".$searchTerm."%'"); 
+$query = $conn->query("SELECT *  FROM link_db WHERE l_title LIKE '%".$searchTerm."%'"); 
 $query->execute();
 $rows = $query->fetchAll();
  
